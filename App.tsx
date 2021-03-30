@@ -1,21 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar"
+import React from "react"
+import {} from "react-dom"
+import tailwind from "tailwind-rn"
+import { StyleSheet, Text, View, Button } from "react-native"
+import SignUp from "pages/SignUp"
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text style={styles.Text}>Welcome to the Grocery App</Text>
+      <Button title="Log in" onPress={() => console.log("Log in!")} />
+      <Button title="Sign Up" onPress={() => console.log("Sign up!")} />
+      <Button
+        title="Continue without registration!"
+        onPress={() => console.log("Continue without registration!")}
+      />
       <StatusBar style="auto" />
+      <SignUp />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
-});
+  Text: tailwind("text-green-600"),
+})
