@@ -1,23 +1,20 @@
-import { StatusBar } from "expo-status-bar"
-import React from "react"
-import {} from "react-dom"
+import * as React from "react"
 import tailwind from "tailwind-rn"
 import { StyleSheet, Text, View, Button } from "react-native"
-import SignUp from "pages/SignUp"
+import SignUp from "./pages/SignUp"
+import LandingPage from "./pages/LandingPage"
+import { createStackNavigator } from "@react-navigation/stack"
+import { NavigationContainer } from "@react-navigation/native"
+
+const Stack = createStackNavigator()
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.Text}>Welcome to the Grocery App</Text>
-      <Button title="Log in" onPress={() => console.log("Log in!")} />
-      <Button title="Sign Up" onPress={() => console.log("Sign up!")} />
-      <Button
-        title="Continue without registration!"
-        onPress={() => console.log("Continue without registration!")}
-      />
-      <StatusBar style="auto" />
-      <SignUp />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="LandingPage" component={LandingPage}></Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 

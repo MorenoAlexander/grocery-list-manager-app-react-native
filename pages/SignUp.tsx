@@ -8,7 +8,7 @@ export default function SignUp() {
   return (
     <>
       <View>
-        <Text style={{ width: "2000px" }}>Hdasello world!@!#$#@$!!</Text>
+        <Text style={{ width: "2000px" }}>Hello Wodrld!</Text>
       </View>
     </>
   )
