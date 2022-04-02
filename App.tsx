@@ -7,6 +7,11 @@ import { createStackNavigator } from "@react-navigation/stack"
 import { NavigationContainer } from "@react-navigation/native"
 
 const Stack = createStackNavigator()
+// asdasdasd
+
+
+
+
 
 export default function App() {
   return (
