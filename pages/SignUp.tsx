@@ -4,12 +4,18 @@ import {} from "react-dom"
 import tailwind from "tailwind-rn"
 import { StyleSheet, Text, View } from "react-native"
 
-export default function SignUp() {
+export default function SignUpScreen() {
   return (
     <>
       <View>
-        <Text style={{ width: "2000px" }}>Hello Wodrld!</Text>
+        <Text style={styles.text}>Hello World!</Text>
       </View>
     </>
   )
 }
+
+const styles = StyleSheet.create({
+    text: {
+        fontSize: 20,
+    }
+})

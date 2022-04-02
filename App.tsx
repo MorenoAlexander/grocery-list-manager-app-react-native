@@ -1,7 +1,7 @@
 import * as React from "react"
 import tailwind from "tailwind-rn"
 import { StyleSheet, Text, View, Button } from "react-native"
-import SignUp from "./pages/SignUp"
+import SignUpScreen from "./pages/SignUp"
 import LandingPage from "./pages/LandingPage"
 import { createStackNavigator } from "@react-navigation/stack"
 import { NavigationContainer } from "@react-navigation/native"
@@ -12,7 +12,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="LandingPage" component={LandingPage}></Stack.Screen>
+        <Stack.Screen name="Welcome" component={LandingPage}/>
+        <Stack.Screen name="SignUp"  component={SignUpScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
